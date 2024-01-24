@@ -1,5 +1,5 @@
 import 'package:flower_boutique/feature/autorization/bloc/autorization_bloc.dart';
-import 'package:flower_boutique/feature/catalog/ui/catalog_flowers_screen.dart';
+import 'package:flower_boutique/feature/catalog/ui/tab_bar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -83,7 +83,7 @@ class AutorizationScreen extends StatelessWidget {
                       onPressed: () {
                         if (state.isValid && state.allFieldEntered) {
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => const CatalogFlowersScreen()),
+                            MaterialPageRoute(builder: (context) => TabBarScreen()),
                           );
                         }
                       },
