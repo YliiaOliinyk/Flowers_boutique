@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
 class ButtonAddToBasket extends StatelessWidget {
-  const ButtonAddToBasket({super.key, required this.price, required this.name});
+  const ButtonAddToBasket({
+    super.key,
+    required this.price,
+    required this.name,
+  });
 
   final int price;
   final String name;

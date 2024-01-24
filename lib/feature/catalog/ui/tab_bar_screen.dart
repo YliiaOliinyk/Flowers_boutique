@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TabBarScreen extends StatelessWidget {
-  TabBarScreen({super.key});
+  const TabBarScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,9 @@ class TabBarScreen extends StatelessWidget {
               ),
             ),
           ),
-          actions: [const CheckoutBasketItem()],
+          actions: const [
+            CheckoutBasketItem(),
+          ],
           bottom: const TabBar(
             splashBorderRadius: BorderRadius.all(
               Radius.circular(8),
@@ -33,7 +35,7 @@ class TabBarScreen extends StatelessWidget {
             tabAlignment: TabAlignment.center,
             labelPadding: EdgeInsets.symmetric(horizontal: 30),
             isScrollable: true,
-            indicatorColor: const Color.fromARGB(255, 143, 38, 73),
+            indicatorColor: Color.fromARGB(255, 143, 38, 73),
             labelColor: Colors.black,
             unselectedLabelColor: Colors.grey,
             labelStyle: TextStyle(fontSize: 16),
@@ -45,14 +47,12 @@ class TabBarScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: Container(
-          child: const TabBarView(
-            children: [
-              BouquetsTab(),
-              PlantsTab(),
-              BalloonsTab(),
-            ],
-          ),
+        body: const TabBarView(
+          children: [
+            BouquetsTab(),
+            PlantsTab(),
+            BalloonsTab(),
+          ],
         ),
       ),
     );

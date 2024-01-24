@@ -7,6 +7,11 @@ import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
+/**
+ * 2. В EdgeInsets передаємо тільки цілі значення без дробової частини 16.0 - погана практика
+ * 3. В тебе є варінг в класі який ти не виправила 
+ * 4. Не подобаються значення висоти и ширини для картинок обговоримо це разом
+ */
 class DetailedInformBouquetsScreen extends StatelessWidget {
   const DetailedInformBouquetsScreen({
     super.key,
@@ -37,16 +42,25 @@ class DetailedInformBouquetsScreen extends StatelessWidget {
             child: Image.asset(
               detailedInformBouquets.picture,
               fit: BoxFit.fitHeight,
-              height: 450,
+              height: 420,
               width: 400,
             ),
           ),
-          const SizedBox(height: 8),
           Text(
             detailedInformBouquets.name,
             style: const TextStyle(
-              fontSize: 40,
+              fontSize: 38,
               color: Colors.black,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              detailedInformBouquets.description,
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.black,
+              ),
             ),
           ),
           const Spacer(),

@@ -42,7 +42,11 @@ class PlantsTab extends StatelessWidget {
                     tag: catalogPlants[index].name,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(catalogPlants[index].picture, height: 150, width: 190),
+                      child: Image.asset(
+                        catalogPlants[index].picture,
+                        height: 150,
+                        width: 190,
+                      ),
                     ),
                   ),
                   Text(

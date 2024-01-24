@@ -3,9 +3,7 @@ import 'package:flower_boutique/feature/detailed/ui/detailed_inform_bouquets_scr
 import 'package:flutter/material.dart';
 
 class BouquetsTab extends StatelessWidget {
-  const BouquetsTab({
-    super.key,
-  });
+  const BouquetsTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,11 @@ class BouquetsTab extends StatelessWidget {
                     tag: catalogFlowers[index].name,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 6),
-                      child: Image.asset(catalogFlowers[index].picture, height: 150, width: 200),
+                      child: Image.asset(
+                        catalogFlowers[index].picture,
+                        height: 150,
+                        width: 200,
+                      ),
                     ),
                   ),
                   Text(

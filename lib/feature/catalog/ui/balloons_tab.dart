@@ -41,7 +41,11 @@ class BalloonsTab extends StatelessWidget {
                     tag: catalogBalloons[index].name,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(catalogBalloons[index].picture, height: 160, width: 200),
+                      child: Image.asset(
+                        catalogBalloons[index].picture,
+                        height: 160,
+                        width: 200,
+                      ),
                     ),
                   ),
                   Text(

@@ -4,6 +4,12 @@ import 'package:flower_boutique/feature/detailed/ui/button_add_to_basket.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/**
+ * 1. Не потрібна пуста стріка в build 
+ * 2. В EdgeInsets передаємо тільки цілі значення без дробової частини 16.0 - погана практика
+ * 3. В тебе є варінг в класі який ти не виправила 
+ * 4. Не подобаються значення висоти и ширини для картинок обговоримо це разом
+ */
 class DetailedInformPlantsScreen extends StatelessWidget {
   const DetailedInformPlantsScreen({
     super.key,
@@ -25,7 +31,9 @@ class DetailedInformPlantsScreen extends StatelessWidget {
             ),
           ),
         ),
-        actions: [const CheckoutBasketItem()],
+        actions: const [
+          CheckoutBasketItem(),
+        ],
       ),
       body: Column(
         children: [
@@ -38,12 +46,22 @@ class DetailedInformPlantsScreen extends StatelessWidget {
               width: 400,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
           Text(
             detailedInformPlants.name,
             style: const TextStyle(
               fontSize: 40,
               color: Colors.black,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              detailedInformPlants.description,
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+              ),
             ),
           ),
           const Spacer(),

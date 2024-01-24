@@ -46,6 +46,16 @@ class DetailedInformBalloonsScreen extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(
+              detailedInformBalloons.description,
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.black,
+              ),
+            ),
+          ),
           const Spacer(),
           ButtonAddToBasket(
             price: detailedInformBalloons.price,
